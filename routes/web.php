@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Cabout;
 use App\Http\Controllers\Chome;
+use App\Http\Controllers\Clogin;
 use App\Http\Controllers\Cproduct;
+use Illuminate\Contracts\Filesystem\Cloud;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +28,5 @@ Route::get('/', function () {
 
 Route::resource('home',Chome::class);
 Route::resource('product',Cproduct::class);
+Route::resource('about',Cabout::class);
+Route::resource('login',Clogin::class);
