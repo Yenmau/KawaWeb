@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Chome;
+use App\Http\Controllers\Cproduct;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +22,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::resource('home',Chome::class);
+Route::resource('product',Cproduct::class);
