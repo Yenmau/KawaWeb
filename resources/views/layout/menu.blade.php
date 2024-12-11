@@ -16,19 +16,23 @@
         </a>
 
         <div class="col-span-1 flex justify-center gap-16 font-regular text-lg items-center">
-            <a href="{{ route('home.index') }}" class="{{ Route::is('home.index') ? 'font-bold' : '' }}">
+            <a href="{{ route('home.index') }}"
+                class="{{ Route::is('home.index') ? 'font-bold' : '' }}">
                 Home
             </a>
-            <a href="{{ route('product.index') }}" class="{{ Route::is('product.index') ? 'font-bold' : '' }}">
+            <a href="{{ route('product.index') }}"
+                class="{{ Route::is('product.index') ? 'font-bold' : '' }}">
                 Product
             </a>
-            <a href="{{ route('about.index') }}" class="{{ Route::is('about.index') ? 'font-bold' : '' }}">
+            <a href="{{ route('about.index') }}"
+                class="{{ Route::is('about.index') ? 'font-bold' : '' }}">
                 About
             </a>
         </div>
 
 
-        <a class="col-span-1 flex justify-end font-semibold text-2xl items-center mr-12 " href="{{route('login.index')}}">
+        <a class="col-span-1 flex justify-end font-semibold text-2xl items-center mr-12 "
+            href="{{ route('login.index') }}">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="size-6 mr-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -44,37 +48,40 @@
     @yield('konten')
 </body>
 
-  <footer class="bg-gray-900 text-white py-8">
+<footer class="bg-gray-900 text-white py-8">
     <div class="mx-[104px]">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-      <div>
-        <h4 class="text-lg font-bold">Kawa Sejahtera Mandiri</h4>
-        <p class="mt-2 text-sm">
-          We help you find your dream home with transparency, professionalism, and care. Your satisfaction is our priority.
-        </p>
-      </div>
-      <div>
-        <h4 class="text-lg font-bold">Quick Links</h4>
-        <ul class="mt-2 space-y-2">
-          <li><a href="#" class="text-purple-400 hover:text-purple-300">Home</a></li>
-          <li><a href="#" class="text-purple-400 hover:text-purple-300">Properties</a></li>
-          <li><a href="#" class="text-purple-400 hover:text-purple-300">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-lg font-bold">Contact Us</h4>
-        <ul class="mt-2 space-y-2 text-sm">
-          <li>Email: <a href="mailto:info@kawa.com" class="text-purple-400 hover:text-purple-300">info@kawa.com</a></li>
-          <li>Phone: <a href="tel:+1234567890" class="text-purple-400 hover:text-purple-300">+123 456 7890</a></li>
-          <li>Address: Jl. Example No.123, City</li>
-        </ul>
-      </div>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h4 class="text-lg font-bold">Kawa Sejahtera Mandiri</h4>
+                <p class="mt-2 text-sm">
+                    We help you find your dream home with transparency, professionalism, and care. Your satisfaction is
+                    our priority.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold">Quick Links</h4>
+                <ul class="mt-2 space-y-2">
+                    <li><a href="#" class="text-purple-400 hover:text-purple-300">Home</a></li>
+                    <li><a href="#" class="text-purple-400 hover:text-purple-300">Properties</a></li>
+                    <li><a href="#" class="text-purple-400 hover:text-purple-300">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold">Contact Us</h4>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li>Email: <a href="mailto:info@kawa.com"
+                            class="text-purple-400 hover:text-purple-300">info@kawa.com</a></li>
+                    <li>Phone: <a href="tel:+1234567890" class="text-purple-400 hover:text-purple-300">+123 456 7890</a>
+                    </li>
+                    <li>Address: Jl. Example No.123, City</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-xs text-gray-400">
+            &copy; 2024 Kawa Sejahtera Mandiri. All rights reserved.
+        </div>
     </div>
-    <div class="mt-8 text-center text-xs text-gray-400">
-      &copy; 2024 Kawa Sejahtera Mandiri. All rights reserved.
-    </div>
-    </div>
-  </footer>
-  
+</footer>
+
 
 </html>
