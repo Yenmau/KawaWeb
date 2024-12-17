@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class Clogin extends Controller
 {
@@ -11,7 +13,40 @@ class Clogin extends Controller
      */
     public function index()
     {
-        return view('login');
+        return view('login.index');
+    }
+
+    function login(Request $request)
+    {
+        $validasi = Validator::make($request->all(), [
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+
+        if ($validasi->fails()) {
+            return redirect('login')
+                ->withErrors($validasi)
+                ->withInput();
+        }
+
+        $infologin = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+
+        if (Auth::attempt($infologin)) {
+            //Jika Berhasil
+            return redirect('dashboard');
+        } else {
+            //Jika Gagal
+            return redirect('login')->withErrors('Email dan Password Salah');
+        }
+    }
+
+    function logout()
+    {
+        Auth::logout();
+        return redirect('login');
     }
 
     /**

@@ -11,9 +11,9 @@
             range of options, we make it easy for you to discover a place you'll love to call home.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
+            <img src="img/rumah4.jpg" alt="House" class="rounded-lg shadow-md">
             <img src="img/rumah1.jpg" alt="House" class="rounded-lg shadow-md">
-            <img src="img/rumah1.jpg" alt="House" class="rounded-lg shadow-md">
-            <img src="img/rumah1.jpg" alt="House" class="rounded-lg shadow-md">
+            <img src="img/rumah4.jpg" alt="House" class="rounded-lg shadow-md">
             <img src="img/rumah1.jpg" alt="House" class="rounded-lg shadow-md">
         </div>
     </section>
@@ -40,7 +40,7 @@
         <div class="mx-[104px]">
             <div class="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center gap-12">
                 <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                    <img class="object-cover object-center rounded h-[400px] w-[500px]" alt="hero" src="img/rumah1.jpg">
+                    <img class="object-cover object-center rounded h-[400px] w-[500px]" alt="hero" src="img/rumah2.jpg">
                 </div>
                 <div
                     class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                    <img class="object-cover object-center rounded h-[400px] w-[500px]" alt="hero" src="img/rumah1.jpg">
+                    <img class="object-cover object-center rounded h-[400px] w-[500px]" alt="hero" src="img/rumah3.jpg">
                 </div>
             </div>
         </div>

@@ -6,41 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Kawa</title>
+    <link rel="icon" type="image/x-icon" href="/img/kawa.png">
+    <title>PT Kawa Sejahtera Mandiri</title>
 </head>
+
 <nav class="bg-[#FFFAE9] py-4">
-    <div class="grid grid-cols-3 gap-2 h-full mx-[104px]">
-        <a class="flex ml-12 gap-4 items-center " href="{{ route('home.index') }}">
-            <img src="/img/kawa.png" width="50px" height="50px" alt="logo">
+    <div class="grid grid-cols-3 gap-4 items-center mx-auto px-6 md:px-[104px]">
+        <!-- Logo dan Nama -->
+        <a class="flex gap-4 items-center" href="{{ route('home.index') }}" aria-label="Homepage">
+            <img src="/img/kawa.png" width="50" height="50" alt="Kawa Logo">
             <h1 class="text-xl font-semibold">Kawa Sejahtera Mandiri</h1>
         </a>
 
-        <div class="col-span-1 flex justify-center gap-16 font-regular text-lg items-center">
-            <a href="{{ route('home.index') }}"
-                class="{{ Route::is('home.index') ? 'font-bold' : '' }}">
+        <!-- Menu Navigasi -->
+        <div class="col-span-1 flex justify-center gap-8 font-medium text-lg">
+            <a href="{{ route('home.index') }}" 
+               class="{{ Route::is('home.index') ? 'font-bold text-[#FD5F0E]' : '' }}">
                 Home
             </a>
-            <a href="{{ route('product.index') }}"
-                class="{{ Route::is('product.index') ? 'font-bold' : '' }}">
-                Product
+            <a href="{{ route('property.index') }}" 
+               class="{{ Route::is('property.index') ? 'font-bold text-[#FD5F0E]' : '' }}">
+                Property
             </a>
-            <a href="{{ route('about.index') }}"
-                class="{{ Route::is('about.index') ? 'font-bold' : '' }}">
+            <a href="{{ route('about.index') }}" 
+               class="{{ Route::is('about.index') ? 'font-bold text-[#FD5F0E]' : '' }}">
                 About
             </a>
         </div>
 
-
-        <a class="col-span-1 flex justify-end font-semibold text-2xl items-center mr-12 "
-            href="{{ route('login.index') }}">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                stroke="currentColor" class="size-6 mr-5">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-            </svg>
-
-            <div class="bg-[#FD5F0E] px-5 py-2 rounded-lg text-white text-lg">Login</div>
-        </a>
+        <!-- User Info dan Login -->
+        <div class="flex justify-end items-center gap-4">
+            @auth
+                <h1 class="hidden md:block text-lg">Hi, <span class="font-bold">{{ Auth::user()->nama }}</span></h1>
+                <form action="{{ route('logout') }}" method="POST" class="inline">
+                    @csrf
+                    <button type="submit" 
+                        class="bg-[#FD5F0E] px-5 py-2 rounded-lg text-white text-lg">
+                        Logout
+                    </button>
+                </form>
+            @else
+                <a href="{{ route('login.index') }}" 
+                   class="bg-[#FD5F0E] px-5 py-2 rounded-lg text-white text-lg">
+                    Login
+                </a>
+            @endauth
+        </div>
     </div>
 </nav>
 

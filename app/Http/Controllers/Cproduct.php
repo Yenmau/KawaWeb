@@ -11,7 +11,7 @@ class Cproduct extends Controller
      */
     public function index()
     {
-        return view('product');
+        return view('property.index');
     }
 
     /**
